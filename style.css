@@ -8,12 +8,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: #ffffff;
-    max-width: 1110px;
-    height: 1191px;
-    top: 408px;
-    left: 85px;
     margin: auto;
+    max-width: 1110px;
 }
 
 .title {
@@ -36,15 +32,16 @@ body {
     padding-top: 15px;
     gap: 20px;
     border-radius: 5px;
-    margin: 20px
+    margin: 20px;
+    height: 560px
+
 }
 
 .products-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 340;
-    height: 573;
+    width: 340px;
     top: 408px;
     left: 85px;
     opacity: 1;
@@ -73,13 +70,13 @@ h3 {
 .compound,
 .features {
     font-weight: 400;
-    font-style: Regular;
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0%;
     color: #515076;
     padding: 0;
     list-style-position: inside;
+    width: 287px;
 }
 
 b {
@@ -100,10 +97,9 @@ b {
 
 .cost {
     font-weight: 400;
-    font-style: Regular;
     font-size: 20px;
     line-height: 24px;
-    letter-spacing: 0%;
-    margin: 10px;
+    letter-spacing: normal;
+    margin: 10px 50px;
     color: #515076;
 }
