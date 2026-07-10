@@ -38,8 +38,6 @@ body {
 
 .products-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
     width: 340px;
     color: #515076;
 }
@@ -51,8 +49,6 @@ img {
 
 h3 {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
     letter-spacing: normal;
     text-transform: uppercase;
     color: #A5A3B9;
@@ -73,7 +69,6 @@ h3 {
 
 b {
     font-weight: 700;
-    font-style: Bold;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: normal;
