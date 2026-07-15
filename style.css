@@ -13,7 +13,7 @@ body {
 .container {
     width: 1110px;
     margin: 0 auto;
-    background-image: url(images/одуванчики.jpg);
+    background-image: url("images/dandelions.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
     padding-top: 220px;
@@ -28,7 +28,6 @@ body {
     margin-bottom: 110px;
     margin-top: 0;
 }
-
 
 .clear-list {
     list-style: none;
@@ -49,7 +48,6 @@ body {
 
 .price__cost {
     color: #515076;
-    width: 70px;
     height: 24px;
 }
 
@@ -67,6 +65,19 @@ body {
     display: block;
     color: #8C8C8C;
     text-transform: uppercase;
+}
+
+.card__discription {
+    color: #515076;
+    
+}
+
+.card__compound,
+.compound__name,
+.compound__list {
+    color: #515076;
+    padding: 10px;
+
 }
 
 .products {
