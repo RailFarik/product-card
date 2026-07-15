@@ -1,0 +1,97 @@
+body {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif ;
+    font-size: 13px;
+    line-height: 18px;
+    background-image: url("/product-card/images/одуванчики.jpg");
+    background-repeat: no-repeat;
+    background-position: 41% 5%;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1110px;
+}
+
+
+.title {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 78px;
+    color: #515076;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 200px;
+    
+}
+
+.card {
+    width: 300px;
+    background-color: #ececf3;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 15px;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+
+.products-list {
+    list-style: none;
+    width: 340px;
+    color: #515076;
+}
+
+img {
+    width: 290px;
+    height: 245px;
+}
+
+h3 {
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: #A5A3B9;
+}
+
+.discription,
+.compound,
+.features {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #515076;
+    padding: 0;
+    list-style-position: inside;
+    width: 287px;
+}
+
+b {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: #515076;
+}
+
+.cost-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.cost {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin: 10px 50px;
+    color: #515076;
+}
