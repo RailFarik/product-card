@@ -6,7 +6,6 @@
 
 body {
     font-family: "Montserrat", sans-serif ;
-    font-size: 13px;
     line-height: 18px;
 }
 
@@ -38,17 +37,18 @@ body {
 .card__price {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .price__label {
     color: #515076;
-    width: 56px;
-    height: 24px;
+    font-size: 20px;
 }
 
 .price__cost {
     color: #515076;
     height: 24px;
+    font-size: 20px;
 }
 
 .card {
@@ -59,24 +59,35 @@ body {
 
 .card__image {
     display: block;
+    width: 251;
 }
 
 .card__category {
     display: block;
     color: #8C8C8C;
     text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    width: 171;
+}
+
+.card__name {
+    font-size: 20px;
 }
 
 .card__discription {
     color: #515076;
-    
+    font-size: 13px;
 }
 
-.card__compound,
-.compound__name,
-.compound__list {
+.compound__title {
     color: #515076;
-    padding: 10px;
+}
+
+.compound__list {
+    font-size: 13px;
+    color: #515076;
+    padding-left: 17px;
 
 }
 
