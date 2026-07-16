@@ -60,6 +60,7 @@ body {
 .card__image {
     display: block;
     width: 251;
+    margin-bottom: 30px;
 }
 
 .card__category {
@@ -82,6 +83,7 @@ body {
 
 .compound__title {
     color: #515076;
+    margin-bottom: px;
 }
 
 .compound__list {
@@ -89,6 +91,10 @@ body {
     color: #515076;
     padding-left: 17px;
 
+}
+
+.card__compound {
+line-height: 23px
 }
 
 .products {
