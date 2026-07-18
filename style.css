@@ -1,21 +1,22 @@
-body {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+body {
     font-family: "Montserrat", sans-serif ;
-    font-size: 13px;
     line-height: 18px;
-    background-image: url("/product-card/images/одуванчики.jpg");
-    background-repeat: no-repeat;
-    background-position: 41% 5%;
 }
 
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.container {
+    width: 1110px;
     margin: 0 auto;
-    max-width: 1110px;
+    background-image: url("images/dandelions.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 220px;
 }
-
 
 .title {
     font-weight: 400;
@@ -23,75 +24,87 @@ body {
     line-height: 78px;
     color: #515076;
     text-align: center;
-    margin-bottom: 100px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 200px;
-    
+    margin-bottom: 110px;
+    margin-top: 0;
+}
+
+.clear-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.price__label {
+    color: #515076;
+    font-size: 20px;
+}
+
+.price__cost {
+    color: #515076;
+    height: 24px;
+    font-size: 20px;
 }
 
 .card {
-    width: 300px;
-    background-color: #ececf3;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 15px;
-    border-radius: 5px;
-    margin: 20px;
-
+    background-color: #F7F7FA;
+    padding: 25px;
+    width: 100%;
 }
 
-.products-list {
-    list-style: none;
-    width: 340px;
-    color: #515076;
+.card__image {
+    display: block;
+    width: 251;
+    margin-bottom: 30px;
 }
 
-img {
-    width: 290px;
-    height: 245px;
-}
-
-h3 {
-    font-weight: 400;
-    letter-spacing: normal;
+.card__category {
+    display: block;
+    color: #8C8C8C;
     text-transform: uppercase;
-    color: #A5A3B9;
+    font-weight: 400;
+    font-size: 12px;
+    width: 171;
 }
 
-.discription,
-.compound,
-.features {
-    font-weight: 400;
+.card__name {
+    font-size: 20px;
+}
+
+.card__discription {
+    color: #515076;
     font-size: 13px;
-    line-height: 18px;
-    letter-spacing: normal;
-    color: #515076;
-    padding: 0;
-    list-style-position: inside;
-    width: 287px;
 }
 
-b {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: normal;
+.compound__title {
     color: #515076;
+    margin-bottom: px;
 }
 
-.cost-container {
+.compound__list {
+    font-size: 13px;
+    color: #515076;
+    padding-left: 17px;
+
+}
+
+.card__compound {
+line-height: 23px
+}
+
+.products {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+
 }
 
-.cost {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: normal;
-    margin: 10px 50px;
-    color: #515076;
+.products__item {
+width: 340px;
 }
