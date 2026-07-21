@@ -4,14 +4,14 @@ const firstproductCard = document.querySelector(".products__item");
 const changeColorFirstCardButton = document.querySelector("#change-color-first-card");
 const productCards = document.querySelectorAll(".products__item");
 const changeColorAllCardsButton = document.querySelector("#change-color-all-cards");
-const CyanColorHash = "#00ffff";
-const CoralColorHarh = "#F57A8A";
+const сyanColorHash = "#00ffff";
+const сoralColorHarh = "#F57A8A";
 
 changeColorFirstCardButton.addEventListener("click", () => {
-    firstproductCard.style.backgroundColor = CoralColorHarh;
+    firstproductCard.style.backgroundColor = сoralColorHarh;
 })
-changeColorAllCardsButton.addEventListener("click", () =>{
-    productCards.forEach((card) => card.style.backgroundColor = CyanColorHash);
+changeColorAllCardsButton.addEventListener("click", () => {
+    productCards.forEach((card) => card.style.backgroundColor = сyanColorHash);
 })
                                                 
 // Открыть google
@@ -35,7 +35,7 @@ function openGoogle() {
 
 const outputLogButton = document.querySelector("#output-console-log");
 
-outputLogButton.addEventListener("click", ()=> outputConsoleLog("ДЗ №6"))
+outputLogButton.addEventListener("click", () => outputConsoleLog("ДЗ №6"));
 
 function outputConsoleLog(message) {
     alert(message)
@@ -44,16 +44,16 @@ function outputConsoleLog(message) {
                                                 
 // Упражнение №6
 
-const title = document.querySelector(".title")
+const title = document.querySelector(".title");
 
 title.addEventListener('mouseover', function () {
-  console.log(title.textContent)
+    console.log(title.textContent)
 })
                                                 
 // Упражнение №7
 
 const button = document.querySelector("#button-buy");
 
-button.addEventListener("click",()=>{
-button.classList.toggle("btn1")
+button.addEventListener("click", ()=> {
+    button.classList.toggle("btn1")
 })
