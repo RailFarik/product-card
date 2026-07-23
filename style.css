@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+#button-buy {
+    background-color: #00ffff;
+}
+#button-buy.btn1 {
+    background-color: #F57A8A;
+}
+
 body {
     font-family: "Montserrat", sans-serif ;
     line-height: 18px;
@@ -94,7 +101,7 @@ body {
 }
 
 .card__compound {
-line-height: 23px
+    line-height: 23px
 }
 
 .products {
@@ -106,5 +113,5 @@ line-height: 23px
 }
 
 .products__item {
-width: 340px;
+    width: 340px;
 }
