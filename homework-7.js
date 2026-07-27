@@ -4,12 +4,12 @@ function showTemperature(city, temperature) {
 
 showTemperature('Нижнекамске', '30');
 
-const speedLight = 1079252848;
+const SPEED_LIGHT = 1079252848;
 
 function checkSpeed(speed) {
-    if (speed > speedLight) {
+    if (speed > SPEED_LIGHT) {
         console.log('Сверхсветовая скорость');
-    } else if (speedLight === speed) {
+    } else if (SPEED_LIGHT === speed) {
         console.log('Скорость света');
     } else {
         console.log('Субсветовая скорость');
