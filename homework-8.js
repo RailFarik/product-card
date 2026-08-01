@@ -26,14 +26,14 @@ const myCar = {
     transmission: 'cvt',
 }
 
-myCar.Owner = myData
+myCar.owner = myData
 
 console.log(myCar);
 
 // №5 Написать функцию которая аргументом будет принимать объект, описанный в пункте №4.
 
 function checkMaxSpeed(myCar) {
-    if('maxSpeed' in myCar)
+    if ('maxSpeed' in myCar)
     {
         return;
     } else {
@@ -47,14 +47,14 @@ checkMaxSpeed(myCar)
 объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 */
 
-function myObject(myCar, maxSpeed) {
-    if(maxSpeed in myCar) {
+function showMaxSpeed(myCar, maxSpeed) {
+    if (maxSpeed in myCar) {
         console.log(myCar[maxSpeed]);
     }
 
 }
 
-myObject(myCar, 'maxSpeed');
+showMaxSpeed(myCar, 'maxSpeed');
 
 
 // №7 Создать массив, который содержит названия продуктов (просто строки).
@@ -66,44 +66,45 @@ console.log(products);
 // №8 Создать массив, состоящий из объектов, где объект представляет собой книгу.
 
 const books = [
+
 {
-        title: 'Война и мир',
-        author: 'Лев Толстой',
-        year: 1869,
-        coverColor: 'зеленый',
-        genre: 'роман-эпопея'
-    },
-    {
-        title: 'Винни Пух',
-        author: 'Алан Милн',
-        year: 1926,
-        coverColor: 'желтый',
-        genre: 'детская литература'
-    },
-    {
-        title: 'Богатый папа, бедный папа',
-        author: 'Роберт Кийосаки',
-        year: 1997,
-        coverColor: 'синий',
-        genre: 'финансовая литература'
-    },
-    {
-        title: 'Сахих Бухари',
-        author: 'Мухаммад аль-Бухари',
-        year: 846,
-        coverColor: 'зеленый',
-        genre: 'религиозная литература (хадисы)'
-    }
+    title: 'Война и мир',
+    author: 'Лев Толстой',
+    year: 1869,
+    coverColor: 'зеленый',
+    genre: 'роман-эпопея'
+},
+{
+    title: 'Винни Пух',
+    author: 'Алан Милн',
+    year: 1926,
+    coverColor: 'желтый',
+    genre: 'детская литература'
+},
+{
+    title: 'Богатый папа, бедный папа',
+    author: 'Роберт Кийосаки',
+    year: 1997,
+    coverColor: 'синий',
+    genre: 'финансовая литература'
+},
+{
+    title: 'Сахих Бухари',
+    author: 'Мухаммад аль-Бухари',
+    year: 846,
+    coverColor: 'зеленый',
+    genre: 'религиозная литература (хадисы)'
+}
 ]
 
 books.push(
 {
-        title: 'Мойдодыр',
-        author: 'Корней Иванович Чуковский',
-        year: 1923,
-        coverColor: 'синий',
-        genre: 'Сказка в стихах, детская литература'
-    }
+    title: 'Мойдодыр',
+    author: 'Корней Иванович Чуковский',
+    year: 1923,
+    coverColor: 'синий',
+    genre: 'Сказка в стихах, детская литература'
+}
 )
 
 console.log(books);
@@ -111,30 +112,31 @@ console.log(books);
 // №9 Создать еще один массив и объединить эти два массива в один.
 
 const harryPotterBooks = [
+
 {
-        title: 'Гарри Поттер и философский камень',
-        author: 'Джоан Роулинг',
-        year: 1997,
-        description: 'Первый год обучения Гарри в Хогвартсе.'
-    },
-    {
-        title: 'Гарри Поттер и Тайная комната',
-        author: 'Джоан Роулинг',
-        year: 1998,
-        description: 'Второй год Гарри в Хогвартсе.'
-    },
-    {
-        title: 'Гарри Поттер и узник Азкабана',
-        author: 'Джоан Роулинг',
-        year: 1999,
-        description: 'Третий год обучения.'
-    },
-    {
-        title: 'Гарри Поттер и Кубок огня',
-        author: 'Джоан Роулинг',
-        year: 2000,
-        description: 'Четвертый год и Турнир Трёх Волшебников.'
-    }
+    title: 'Гарри Поттер и философский камень',
+    author: 'Джоан Роулинг',
+    year: 1997,
+    description: 'Первый год обучения Гарри в Хогвартсе.'
+},
+{
+    title: 'Гарри Поттер и Тайная комната',
+    author: 'Джоан Роулинг',
+    year: 1998,
+    description: 'Второй год Гарри в Хогвартсе.'
+},
+{
+    title: 'Гарри Поттер и узник Азкабана',
+    author: 'Джоан Роулинг',
+    year: 1999,
+    description: 'Третий год обучения.'
+},
+{
+    title: 'Гарри Поттер и Кубок огня',
+    author: 'Джоан Роулинг',
+    year: 2000,
+    description: 'Четвертый год и Турнир Трёх Волшебников.'
+}
 ]
 
 console.log(harryPotterBooks);
@@ -147,12 +149,13 @@ console.log(allMyBooks);
  Добавляем новое свойство для объекта "isRare (это редкий)" в зависимости от года выпуска книги.
 */
 
-function addRareProperty(booksArray) {
-    return booksArray.map(book => ({...book,
-    isRare: book.year < 2000 ? true : false 
+function getRareProperty(booksArray) {
+    return booksArray.map(book => ({
+        ...book,
+        isRare: book.year < 2000 ? true : false 
     }));
 }
 
-const updatedBooks = addRareProperty(allMyBooks);
+const updatedBooks = getRareProperty(allMyBooks);
 
 console.log(updatedBooks);
