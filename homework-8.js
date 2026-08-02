@@ -9,8 +9,8 @@ const myData = {
     country: 'Russia',
     city: 'Nizhnekamsk',
     maritalStatus: 'married',
-    children: 'Three children'
-}
+    children: 'Three children',
+};
 
 console.log(myData);
 
@@ -24,7 +24,7 @@ const myCar = {
     year: 2024,
     color: 'white',
     transmission: 'cvt',
-}
+};
 
 myCar.owner = myData
 
@@ -39,9 +39,9 @@ function checkMaxSpeed(myCar) {
     } else {
         myCar.maxSpeed = '220 км/ч'
     }
-}
+};
 
-checkMaxSpeed(myCar)
+checkMaxSpeed(myCar);
 
 /*№6 Написать функцию, которая получает первым аргументом — 
 объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
@@ -52,7 +52,7 @@ function showMaxSpeed(myCar, maxSpeed) {
         console.log(myCar[maxSpeed]);
     }
 
-}
+};
 
 showMaxSpeed(myCar, 'maxSpeed');
 
@@ -67,45 +67,45 @@ console.log(products);
 
 const books = [
 
-{
-    title: 'Война и мир',
-    author: 'Лев Толстой',
-    year: 1869,
-    coverColor: 'зеленый',
-    genre: 'роман-эпопея'
-},
-{
-    title: 'Винни Пух',
-    author: 'Алан Милн',
-    year: 1926,
-    coverColor: 'желтый',
-    genre: 'детская литература'
-},
-{
-    title: 'Богатый папа, бедный папа',
-    author: 'Роберт Кийосаки',
-    year: 1997,
-    coverColor: 'синий',
-    genre: 'финансовая литература'
-},
-{
-    title: 'Сахих Бухари',
-    author: 'Мухаммад аль-Бухари',
-    year: 846,
-    coverColor: 'зеленый',
-    genre: 'религиозная литература (хадисы)'
-}
-]
+    {
+        title: 'Война и мир',
+        author: 'Лев Толстой',
+        year: 1869,
+        coverColor: 'зеленый',
+        genre: 'роман-эпопея',
+    },
+    {
+        title: 'Винни Пух',
+        author: 'Алан Милн',
+        year: 1926,
+        coverColor: 'желтый',
+        genre: 'детская литература',
+    },
+    {
+        title: 'Богатый папа, бедный папа',
+        author: 'Роберт Кийосаки',
+        year: 1997,
+        coverColor: 'синий',
+        genre: 'финансовая литература',
+    },
+    {
+        title: 'Сахих Бухари',
+        author: 'Мухаммад аль-Бухари',
+        year: 846,
+        coverColor: 'зеленый',
+        genre: 'религиозная литература (хадисы)',
+    },
+];
 
-books.push(
-{
+const newBook = {
     title: 'Мойдодыр',
     author: 'Корней Иванович Чуковский',
     year: 1923,
     coverColor: 'синий',
-    genre: 'Сказка в стихах, детская литература'
-}
-)
+    genre: 'Сказка в стихах, детская литература',
+};
+
+books.push(newBook);
 
 console.log(books);
 
@@ -113,31 +113,31 @@ console.log(books);
 
 const harryPotterBooks = [
 
-{
-    title: 'Гарри Поттер и философский камень',
-    author: 'Джоан Роулинг',
-    year: 1997,
-    description: 'Первый год обучения Гарри в Хогвартсе.'
-},
-{
-    title: 'Гарри Поттер и Тайная комната',
-    author: 'Джоан Роулинг',
-    year: 1998,
-    description: 'Второй год Гарри в Хогвартсе.'
-},
-{
-    title: 'Гарри Поттер и узник Азкабана',
-    author: 'Джоан Роулинг',
-    year: 1999,
-    description: 'Третий год обучения.'
-},
-{
-    title: 'Гарри Поттер и Кубок огня',
-    author: 'Джоан Роулинг',
-    year: 2000,
-    description: 'Четвертый год и Турнир Трёх Волшебников.'
-}
-]
+    {
+        title: 'Гарри Поттер и философский камень',
+        author: 'Джоан Роулинг',
+        year: 1997,
+        description: 'Первый год обучения Гарри в Хогвартсе.',
+    },
+    {
+        title: 'Гарри Поттер и Тайная комната',
+        author: 'Джоан Роулинг',
+        year: 1998,
+        description: 'Второй год Гарри в Хогвартсе.',
+    },
+    {
+        title: 'Гарри Поттер и узник Азкабана',
+        author: 'Джоан Роулинг',
+        year: 1999,
+        description: 'Третий год обучения.',
+    },
+    {
+        title: 'Гарри Поттер и Кубок огня',
+        author: 'Джоан Роулинг',
+        year: 2000,
+        description: 'Четвертый год и Турнир Трёх Волшебников.',
+    },
+];
 
 console.log(harryPotterBooks);
 
