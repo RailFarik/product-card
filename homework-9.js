@@ -1,3 +1,6 @@
+import { userComments } from "./comments.js";
+console.log(userComments);
+
 // Уровень 1:
 // Задание №2 - Создать массив чисел от 1 до 10. 
 // Отфильтровать его таким образом, что бы мы получили массив чисел, начиная с 5.
@@ -33,12 +36,6 @@ const reverseFruits = getReverseArray(fruits);
 console.log(reverseNumbers);
 console.log(reverseFruits);
 
-// Уровень 2:
-// Задание №5 и №6.
-
-import { userComments } from "./comments.js";
-console.log(userComments);
-
 // Задание №7 - Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com".
 
 const comComments = userComments.filter(comment => comment.email.includes('.com'));
@@ -51,16 +48,7 @@ const iteratedАrray = userComments.map(comment => ({
     ...comment, postId: comment.id <= 5 ? 2 : 1
 }));
 
-const newComments = userComments.map((comment) => {
-    if (comment. id <= 5) {
-        return {...comment, postId: 2}
-    } else {
-        return {...comment, postId: 1}
-    }
-});
-
 console.log(iteratedАrray);
-console.log(newComments);
 
 // Задание №9 - Перебрать массив, что бы объекты состояли только из айди и имени.
 
