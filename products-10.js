@@ -6,7 +6,6 @@ export const products = [
         image: "Mousee",
         price: 2750,
         currency: "₽",
-        compound__title: "Состав",
         composition: [
             "активные натуральные комплексы",
             "витамины С, А, РР, В И Е",
@@ -20,7 +19,6 @@ export const products = [
         image: "mask",
         price: 3500,
         currency: "₽",
-        compound__title: "Состав",
         composition: [
             "воски",
             "минералы",
@@ -34,7 +32,6 @@ export const products = [
         image: "gel",
         price: 1650,
         currency: "₽",
-        compound__title: "Состав",
         composition: [
             "минералы",
             "витамины С, А, РР, В И Е",
@@ -48,7 +45,6 @@ export const products = [
         image: "SetNo.1",
         price: 4750,
         currency: "₽",
-        compound__title: "Состав",
         composition: [
             "воски",
             "минералы",
@@ -62,7 +58,6 @@ export const products = [
         image: "SetNo.5",
         price: 7520,
         currency: "₽",
-        compound__title: "Состав",
         composition: [
             "воски",
             "минералы",

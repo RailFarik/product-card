@@ -20,7 +20,6 @@ function renderCards(productsArray, count) {
         productClone.querySelector('.card__category').textContent = product.category;
         productClone.querySelector('.card__name').textContent = product.name;
         productClone.querySelector('.card__description').textContent = product.description;
-        productClone.querySelector('.compound__title').textContent = product.compound__title;
         productClone.querySelector('.price__cost').textContent = `${product.price.toLocaleString()} ${product.currency}`;
 
         const list = productClone.querySelector('.compound__list');
