@@ -1,16 +1,12 @@
 const subscribeForm = document.querySelector('.subscribe__form');
-const input = document.querySelector('.subscribe__input');
 
 subscribeForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const email = input.value.trim();
+    const formData = new FormData(subscribeForm);
+    const userEmail = Object.fromEntries(formData.entries());
 
-    const userData = {
-        Email: email
-    };
-
-    console.log(userData);
+    console.log(userEmail);
 });
 
 // Открытие модального окна.
@@ -52,17 +48,10 @@ modalForm.addEventListener('submit', (event) => {
         return;
     };
 
-    user = {
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        birthDate: formData.get('birthDate'),
-        login: formData.get('login'),
-        password: formData.get('password'),
-        passwordRepeat: formData.get('passwordRepeat'),
-        createdOn: new Date()
-    };
+    const userData = Object.fromEntries(formData.entries());
+    userData.createdOn = new Date();
 
-    console.log(user);
+    console.log(userData);
 
     modal.classList.remove('modal-showed');
     overlay.classList.remove('overlay-showed');
