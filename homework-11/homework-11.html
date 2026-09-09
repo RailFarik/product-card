@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homework-11.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="main-title">
+                <h1 class="title">Product Cards</h1>
+                <p class="product">У Нас Самые Лучшие Продукты Для Кожи!</p>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-telegram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-vk fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="subscribe">
+                <h3 class="request">Подпишись на наши акции:</h3>
+                <form class="subscribe__form">
+                    <input type="email" name="userEmail" id="subscribe-input" placeholder="Введите Email..." class="subscribe__input" required>
+                    <span class="subscribe__divider"></span>
+                    <button type="submit" class="subscribe__button">Подписаться</button>
+                </form>
+                <button type="submit" class="registration__button">Регистрация</button>
+            </div>
+            <nav class="links">
+                <ul class="links__list clear-list">
+                    <li class="links-list__link">Быстрые ссылки :</li>
+                    <li><a href="#" class="links-list__link">Главная</a></li>
+                    <li><a href="#" class="links-list__link">Магазин</a></li>
+                    <li><a href="#" class="links-list__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="overlay"></div>
+        <div class="modal__title">
+            <div class="modal__content">
+                <span class="modal__close">&times;</span>
+                <form class="modal__form">
+                    <input type="text" name="firstName" placeholder="Имя" pattern="[А-Яа-яЁёA-Za-z]+" required>
+                    <input type="text" name="lastName" placeholder="Фамилия" pattern="[А-Яа-яЁёA-Za-z]+" required>
+                    <input type="date" name="birthDate" placeholder="Дата рождения" required>
+                    <input type="text" name="login" placeholder="Логин" minlength="4" required>
+                    <input type="password" name="password" class="password" placeholder="Пароль" minlength="4" required>
+                    <input type="password" name="passwordRepeat" class="password__repeat" placeholder="Повтор пароля" required>
+                    <button type="submit" class="modal__button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+        <hr class="footer__line">
+        <footer class="footer">
+            <a href="#" class="copyright__link"> www.product-cards.com@all right reserve </a>
+        </footer>
+    </main>
+    <script type="module" src="homework-11.js"></script>
+
+</body>
+
+</html>
