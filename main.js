@@ -1,3 +1,54 @@
+import './comments.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './homework-10/homework-10.js';
+import './homework-11/homework-11.js';
+
+// ДЗ №12
+// Придумайте свою структуру и реализуйте наследуемость классов.
+class FootballTeam {
+    constructor(name) {
+        this.name = name;
+    }
+
+    showTeam() {
+        console.log(`${this.name}`);
+    }
+}
+class CityTeam extends FootballTeam {
+    constructor(name, city) {
+        super(name);
+        this.city = city;
+    }
+
+    showCity() {
+        console.log(`${this.city}`);
+    }
+}
+class StadiumTeam extends CityTeam {
+    constructor(name, city, stadium) {
+        super(name, city);
+        this.stadium = stadium;
+    }
+
+    showStadium() {
+        console.log(`${this.stadium}`);
+    }
+}
+
+const club1 = new StadiumTeam('Рубин', 'Казань', 'Ак Барс арена');
+const club2 = new StadiumTeam('Зенит', 'Санкт-Петербург', 'Газпром Арена');
+
+club1.showTeam()
+club1.showCity()
+club1.showStadium()
+
+club2.showTeam()
+club2.showCity()
+club2.showStadium()
+
+// ДЗ №6
 // Покраска карточек
 
 const firstproductCard = document.querySelector(".products__item");

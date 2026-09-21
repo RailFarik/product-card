@@ -1,3 +1,6 @@
+import Modal from './Modal.js';
+import Form from './Form.js';
+
 const subscribeForm = document.querySelector('.subscribe__form');
 
 subscribeForm.addEventListener('submit', (event) => {
@@ -11,49 +14,35 @@ subscribeForm.addEventListener('submit', (event) => {
 
 // Открытие модального окна.
 
-let user;
-
 const registrationButton = document.querySelector('.registration__button');
-const modal = document.querySelector('.modal__title');
-const overlay = document.querySelector('.overlay');
-const modalClose = document.querySelector('.modal__close');
 const modalForm = document.querySelector('.modal__form');
-const passwordInput = document.querySelector('.password');
-const passwordRepeatInput = document.querySelector('.password__repeat');
+const modal = new Modal('modal');
+const form = new Form('registrationForm');
 
 registrationButton.addEventListener('click', () => {
-    modal.classList.add('modal-showed');
-    overlay.classList.add('overlay-showed');
-});
-
-modalClose.addEventListener('click', () => {
-    modal.classList.remove('modal-showed');
-    overlay.classList.remove('overlay-showed');
+    modal.open();
 });
 
 // Валидация модального окна:
 
-modalForm.addEventListener('submit', (event) => {
+form.form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    if (!modalForm.checkValidity()) {
+    if (!form.isValid()) {
         alert('Регистрация отклонена.');
         return;
-    };
+    }
+    const userData = form.getValues();
 
-    const formData = new FormData(modalForm);
-
-    if (formData.get('password') !== formData.get('passwordRepeat')) {
+    if (userData.password!== userData.passwordRepeat) {
         alert('Пароль не совпадает.');
         return;
-    };
+    }
 
-    const userData = Object.fromEntries(formData.entries());
     userData.createdOn = new Date();
 
     console.log(userData);
 
-    modal.classList.remove('modal-showed');
-    overlay.classList.remove('overlay-showed');
-    modalForm.reset();
+    modal.close();
+    form.reset();
 });
