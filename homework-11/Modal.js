@@ -1,5 +1,3 @@
-export default Modal;
-
 class Modal {
     constructor(id) {
         this.modal = document.getElementById(id);
@@ -29,3 +27,5 @@ class Modal {
         });
     }
 };
+
+export default Modal;
