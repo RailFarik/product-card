@@ -1,5 +1,3 @@
-export default Form;
-
 class Form {
     constructor(id) {
         this.form = document.getElementById(id);
@@ -18,3 +16,5 @@ class Form {
         this.form.reset();
     }
 };
+
+export default Form;
