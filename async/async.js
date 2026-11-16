@@ -1,3 +1,5 @@
+const userTemplate = document.getElementById('user-template');
+
 const message = document.getElementById('message');
 const usersContainer = document.getElementById('users');
 
@@ -8,28 +10,17 @@ let users = [];
 let allUsers = [];
 
 const savedUsers = localStorage.getItem('users');
-const savedAllUsers = localStorage.getItem('allUsers');
 
-if (savedAllUsers !== null) {
-    allUsers = JSON.parse(savedAllUsers);
-}
+async function fetchUsers() {
+    const response = await fetch('./users.json');
 
-function fetchUsers() {
-    return fetch('./users.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Ошибка загрузки данных');
-            }
+    if (!response.ok) {
+        throw new Error('Ошибка загрузки данных');
+    }
 
-            return response.json();
-        })
-        .then(data => {
-            allUsers = data.users;
+    const data = await response.json();
 
-            localStorage.setItem('allUsers', JSON.stringify(allUsers));
-
-            return allUsers;
-        });
+    allUsers = data.users;
 }
 
 if (savedUsers === null) {
@@ -59,13 +50,12 @@ if (savedUsers === null) {
 
     console.log('Данные найдены');
 
-    if (savedAllUsers === null) {
-        fetchUsers()
-            .catch(error => {
-                console.error(error);
-            });
-    }
+    fetchUsers()
+        .catch(error => {
+            console.error(error);
+        });
 }
+
 
 deleteAllButton.addEventListener('click', () => {
     users = [];
@@ -104,21 +94,20 @@ function renderUsers(usersList) {
     message.textContent = '';
 
     usersList.forEach(user => {
-        const card = document.createElement('div');
-        card.classList.add('user-card');
+        const card = userTemplate.content.cloneNode(true);
 
-        card.innerHTML = `
-            <h3>${user.name} ${user.surname}</h3>
-            <p>Email: ${user.email}</p>
-            <p>Возраст: ${user.age}</p>
-            <button class="delete-user" data-id="${user.id}">
-                Удалить
-            </button>
-        `;
+        card.querySelector('.user-name').textContent =
+            `${user.name} ${user.surname}`;
 
-        usersContainer.append(card);
+        card.querySelector('.user-email').textContent =
+            `Email: ${user.email}`;
+
+        card.querySelector('.user-age').textContent =
+            `Возраст: ${user.age}`;
 
         const deleteButton = card.querySelector('.delete-user');
+
+        deleteButton.dataset.id = user.id;
 
         deleteButton.addEventListener('click', () => {
             const userId = Number(deleteButton.dataset.id);
@@ -129,5 +118,6 @@ function renderUsers(usersList) {
 
             renderUsers(users);
         });
+        usersContainer.append(card);
     });
 };
