@@ -42,7 +42,6 @@ if (savedUsers === null) {
                 message.textContent = 'Ошибка при загрузке данных';
             });
     }, 2000);
-
 } else {
     users = JSON.parse(savedUsers);
 
@@ -54,7 +53,7 @@ if (savedUsers === null) {
         .catch(error => {
             console.error(error);
         });
-}
+};
 
 
 deleteAllButton.addEventListener('click', () => {
